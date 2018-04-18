@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSansExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/OpenSansExtraBold.woff') format('woff'), url('../font/OpenSansExtraBold.ttf') format('ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSansLight.eot?#iefix') format('embedded-opentype'), url('../font/OpenSansLight.woff') format('woff'), url('../font/OpenSansLight.ttf') format('ttf');
+}
+
+body {
+    color: #333;
+    font-family: 'OpenSans', Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.header-block {
+    padding-top: 4rem;
+}
+
+.header-block__title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6047;
+}
+
+.header-block__divider {
+    position: relative;
+    margin: 1.4rem auto;
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    background-color: #ff6047;
+    border-radius: 50%;
+}
+
+.header-block__divider::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: -67px;
+    top: 1px;
+    height: 2px;
+    width: 65px;
+    background-color: #ddd;
+}
+
+.header-block__divider::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: -67px;
+    top: 1px;
+    height: 2px;
+    width: 65px;
+    background-color: #ddd;
+}
+
+.header-block__text{
+    margin: 0 auto;
+    max-width: 60%;
+    font-size: .75rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.menu-block {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.menu-block__item {
+    display: inline-block;
+    position: relative;
+    padding: 10px 13px 9px 20px;
+    margin: 0 2px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    transition: all .3s;
+}
+
+.menu-block__item:hover {
+    background-color: #ff6047;
+    border-color: #ff6047;
+    color: #fff;
+}
+
+.menu-block__item:hover::before {
+    background-color: #fff;
+}
+
+.menu-block__item::before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: .8rem;
+    left: 9px;
+    background-color: #ff6047;
+    border-radius: 50%;
+}
+
+.menu-block a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-block li {
+    display: inline-block;
+}
+
+.picture-section {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.picture-section__anchor {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 225px;
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+    text-decoration: none;
+}
+
+.picture-section__anchor:nth-child(1) {
+    background-image: url("../img/Rectangle 57.png");
+}
+
+.picture-section__anchor:nth-child(2) {
+    background-image: url("../img/Rectangle 57-1.png");
+}
+
+.picture-section__anchor:nth-child(3) {
+    background-image: url("../img/Rectangle 57-2.png");
+}
+
+.picture-section__anchor:nth-child(4) {
+    background-image: url("../img/Rectangle 57-3.png");
+}
+
+.picture-section__anchor:nth-child(5) {
+    background-image: url("../img/Rectangle 57-4.png");
+}
+
+.picture-section__anchor:nth-child(6) {
+    background-image: url("../img/Rectangle 57-5.png");
+}
+
+.picture-section__anchor:nth-child(7) {
+    background-image: url("../img/Rectangle 57-6.png");
+}
+
+.picture-section__anchor:nth-child(8) {
+    background-image: url("../img/Rectangle 57-7.png");
+}
+
+.picture-section__anchor::before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.picture-section__anchor:hover::before {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.picture-section__title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding-top: 80px;
+    font-weight: bold;
+    text-align: center;
+    transition: padding 0.5s, border .3s ease-in-out;
+}
+
+.picture-section__anchor:hover .picture-section__title {
+    padding-top: 70px;
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.picture-section__description {
+    font-size: .7rem;
+    font-weight: normal;
+    line-height: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.picture-section__anchor:hover .picture-section__description{
+    opacity: 100;
+    visibility: visible;
+}
