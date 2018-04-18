@@ -207,6 +207,6 @@ body {
 }
 
 .picture-section__anchor:hover .picture-section__description{
-    opacity: 100;
+    opacity: 1;
     visibility: visible;
 }
